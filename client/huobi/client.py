@@ -47,11 +47,13 @@ class Client(BaseClient):
             account['free']['ltc'] = ret['available_ltc_display']
             account['free']['btc'] = ret['available_btc_display']
             account['free']['eth'] = 0
+            account['free']['etc'] = 0
             account['asset']['total'] = ret['total']
             account['frozen']['cny'] = float(ret['frozen_cny_display'])
             account['frozen']['ltc'] = ret['frozen_ltc_display']
             account['frozen']['btc'] = ret['frozen_btc_display']
             account['frozen']['eth'] = 0
+            account['free']['etc'] = 0
         accounts = self.huobi_client.get('/v1/account/accounts')
         for acc in accounts:
             eth_account = self.huobi_client.get('/v1/account/accounts/%s/balance' % acc.id)

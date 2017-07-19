@@ -26,7 +26,7 @@ class CarryBrick:
         # btc38.Client(),          # btc38 客户端
     )
     logger = get_logger('carry brick')
-    coin = 'eth'
+    coin = 'ltc'
     coin_diff = None
 
     def __init__(self, trade_coin):
@@ -113,7 +113,7 @@ class CarryBrick:
         #             buy_count += 0.0002
         #         else:
         #             buy_count += 0.0001
-        buy_count += 0.0003
+        # buy_count += 0.0003
         if self.coin_diff:
             buy_count += float(self.coin_diff)
         if buy_count * min_buy['depth'][0] > float(account[min_buy['client'].name]['free']['cny']):
