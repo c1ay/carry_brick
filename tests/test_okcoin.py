@@ -7,7 +7,7 @@ from client.okcoin import client as okcoin_client
 
 def test_ltc():
     client = okcoin_client.Client()
-    # print(client.account())
+    print(client.account())
     print(client.ltc_ticker())
     depth = client.ltc_depth()
     print('卖方')
@@ -29,6 +29,7 @@ def test_ltc():
 
 def test_eth():
     client = okcoin_client.Client()
+    print(client.account())
     print(client.ticker('eth'))
     ret = client.depth('eth')
     print(ret['asks'][:10])

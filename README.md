@@ -12,7 +12,8 @@
 
 #### 运行
 
+* `pip/pip3 install -r requirements.txt`
 * 在`client`目录里各个平台的api key 填上
-* `python app.py`
+* `python3 app.py`
 
-> 默认搬运`ltc`, 在`app.py`里将`ltc`改为`eth`即可搬运。其他币种未测试。
+> 默认搬运`ltc`, 在`app.py`里将`ltc`改为`eth`即可搬运`eth`。其他币种未测试。

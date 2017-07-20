@@ -47,5 +47,5 @@ def test_eth_market():
 
 if __name__ == '__main__':
     # test_ltc()
-    # test_eth()
-    test_eth_market()
+    test_eth()
+    # test_eth_market()
