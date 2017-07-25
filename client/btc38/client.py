@@ -55,6 +55,12 @@ class Client(BaseClient):
         else:
             raise NotImplementedError
 
+    def buy_market(self, amount, coin, price):
+        return self.buy(price, amount, coin)
+
+    def sel_market(self, amount, coin, price):
+        return self.sell(price, amount, coin)
+
     def sell(self, price, amount, coin):
         if coin == 'ltc':
             ret = self.btc38_cli.submitOrder(2, 'cny', price, amount, coin)

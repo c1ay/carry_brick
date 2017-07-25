@@ -126,7 +126,7 @@ class CarryBrick:
         # 先卖出
         self.logger.info("开始卖出")
         try:
-            ret, sell_order_id = sell_client.sell_market(sell_count, coin=self.coin)
+            ret, sell_order_id = sell_client.sell_market(sell_count, coin=self.coin, price=sell_price)
         except Exception as e:
             self.logger.error("卖出错误: %s", str(e))
         if not ret:

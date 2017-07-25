@@ -68,7 +68,7 @@ class Client(BaseClient):
         msg = 'sell {} failed: {}'.format(coin, str(ret))
         return False, msg
 
-    def sell_market(self, amount, coin):
+    def sell_market(self, amount, coin, price=None):
         return self.sell(None, amount, coin)
 
     def buy_ltc(self, price, amount):

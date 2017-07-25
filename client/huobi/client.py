@@ -131,7 +131,7 @@ class Client(BaseClient):
         else:
             return False, ""
 
-    def sell_market(self, amount, coin):
+    def sell_market(self, amount, coin, price=None):
         amount = int(amount * 10000) / 10000
         if coin == 'eth':
             order_id = self.create_oder(None, amount, 'sell-market')
